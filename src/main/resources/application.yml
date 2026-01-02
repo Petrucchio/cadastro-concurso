@@ -1,0 +1,93 @@
+spring:
+  application:
+    name: cadastro-concurso-api
+  
+  # Configuração do Datasource (H2 para desenvolvimento)
+  datasource:
+    url: jdbc:h2:mem:concursodb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  
+  # Configuração JPA/Hibernate
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+  
+  # Console H2 (apenas desenvolvimento)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false
+  
+  # Configuração de Upload
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 10MB
+      file-size-threshold: 2MB
+
+# Configuração do servidor
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-binding-errors: ALWAYS  
+    
+# Configurações customizadas da aplicação
+app:
+  upload:
+    dir: uploads
+
+# Configuração de Logs
+logging:
+  level:
+    root: INFO
+    com.empresa.concurso: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+---
+# ============================================
+# Profile de PRODUÇÃO (exemplo)
+# ============================================
+spring:
+  config:
+    activate:
+      on-profile: prod
+  
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  
+  h2:
+    console:
+      enabled: false
+
+server:
+  port: ${PORT:8080}
+
+app:
+  upload:
+    dir: /var/uploads
+
+logging:
+  level:
+    com.empresa.concurso: INFO
