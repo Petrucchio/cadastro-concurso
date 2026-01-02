@@ -81,7 +81,7 @@ NÃO é necessário instalar o Maven manualmente.
 ======================================================================
 
 1. Clone o repositório:
-git clone https://github.com/seu-usuario/cadastro-concurso.git
+git clone https://github.com/Petrucchio/cadastro-concurso
 cd cadastro-concurso
 
 2. Siga as instruções específicas do seu sistema operacional
@@ -336,9 +336,6 @@ Licença: MIT
 
 Autor:
 Victor José Costa Farias
-GitHub: https://github.com/seu-usuario
-LinkedIn: https://linkedin.com/in/seu-perfil
+GitHub: https://github.com/Petrucchio
+LinkedIn: https://www.linkedin.com/in/victorjosecostafarias/
 
-======================================================================
-FIM DO DOCUMENTO
-======================================================================
