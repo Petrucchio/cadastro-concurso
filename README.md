@@ -1,4 +1,4 @@
-````md
+
 <p align="center">
   <img src="https://img.shields.io/badge/Java-17-orange" />
   <img src="https://img.shields.io/badge/Spring%20Boot-3.2-brightgreen" />
