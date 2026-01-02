@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.empresa.concurso.integration.CandidatoIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.782 s - in com.empresa.concurso.integration.CandidatoIntegrationTest
